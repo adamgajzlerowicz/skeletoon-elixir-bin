@@ -52,7 +52,7 @@ config :phoenix, :stacktrace_depth, 20
 config :skeletoon, Skeletoon.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "dupa",
   database: "skeletoon_dev",
   hostname: "localhost",
   pool_size: 10

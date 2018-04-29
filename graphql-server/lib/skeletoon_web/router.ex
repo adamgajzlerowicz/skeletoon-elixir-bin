@@ -19,8 +19,10 @@ defmodule SkeletoonWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", SkeletoonWeb do
-  #   pipe_through :api
-  # end
+  scope "/graphiql"  do
+    pipe_through :api
+    forward "/", Absinthe.Plug.GraphiQL,
+            schema: Skeletoon.Schema
+  end
+
 end

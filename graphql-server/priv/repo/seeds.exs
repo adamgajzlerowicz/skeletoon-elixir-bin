@@ -9,3 +9,9 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+adam = Skeletoon.Repo.insert! %Skeletoon.User{
+  email: "nelf86@gmail.com",
+  name: "nelf",
+  password: "123"
+}

@@ -1,5 +1,8 @@
 {
   "name": "skeletoon",
+  "scripts": {
+    "docker": "docker run --name skeletoon -p 5432:5432 -e POSTGRES_PASSWORD=dupa -d postgres"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT"
