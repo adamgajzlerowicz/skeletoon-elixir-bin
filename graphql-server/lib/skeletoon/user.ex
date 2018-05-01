@@ -14,6 +14,7 @@ defmodule Skeletoon.User do
     user
     |> cast(attrs, [:name, :email, :password])
     |> validate_required([:name, :email, :password])
+    |> validate_format(:email, ~r/@/)
     |> unique_constraint(:email)
   end
 end
