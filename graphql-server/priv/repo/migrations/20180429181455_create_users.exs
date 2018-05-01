@@ -7,8 +7,10 @@ defmodule Skeletoon.Repo.Migrations.CreateUsers do
       add :email, :string
       add :password, :string
 
+
       timestamps()
     end
+    create unique_index(:users, [:email])
 
   end
 end
