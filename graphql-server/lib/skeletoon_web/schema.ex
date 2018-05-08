@@ -5,7 +5,7 @@ defmodule Skeletoon.Schema do
   query do
     field :users, list_of(:user) do
       resolve fn _params, _info ->
-        {:ok, Skeletoon.Repo.all(Skeletoon.User)}
+        {:ok, Skeletoon.Repo.all(Skeletoon.Models.User)}
       end
     end
   end

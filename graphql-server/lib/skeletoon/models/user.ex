@@ -1,11 +1,11 @@
-defmodule Skeletoon.User do
+defmodule Skeletoon.Models.User do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "users" do
     field :email, :string
     field :name, :string
-    field :password, :string
+    field :password, :string, :virtual
     timestamps()
   end
 

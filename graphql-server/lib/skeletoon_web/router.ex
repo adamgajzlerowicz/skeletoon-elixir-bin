@@ -19,6 +19,12 @@ defmodule SkeletoonWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api/v1", SkeletoonWeb do
+    pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
+  end
+
   scope "/graphiql"  do
     pipe_through :api
     forward "/", Absinthe.Plug.GraphiQL,

@@ -1,7 +1,7 @@
 defmodule Skeletoon.Resolvers.User do
 
   def create_user(_parent, args, _) do
-    changeset = Skeletoon.User.changeset(%Skeletoon.User{}, args);
+    changeset = Skeletoon.Models.User.changeset(%Skeletoon.Models.User{}, args);
 
     case Skeletoon.Repo.insert(changeset) do
       {:ok, user} -> {:ok, user}
