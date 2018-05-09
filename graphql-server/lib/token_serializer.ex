@@ -2,7 +2,7 @@ defmodule Skeletoon.GuardianSerializer do
   @behaviour Guardian.Serializer
 
   alias Skeletoon.Repo
-  alias Skeletoon.User
+  alias Skeletoon.Models.User
 
   def for_token(user = %User{}), do: { :ok, "User:#{user.id}" }
   def for_token(_), do: { :error, "Unknown resource type" }
