@@ -12,7 +12,6 @@ defmodule Skeletoon.Schema do
 
 
   mutation do
-
     field :create_user, type: :user do
       arg :name, non_null(:string)
       arg :password, non_null(:string)

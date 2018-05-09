@@ -6,7 +6,6 @@ defmodule Skeletoon.Schema.Types do
   object :user do
     field :id, :id
     field :email, :string
-    field :password, :string
     field :name, :string
   end
 
