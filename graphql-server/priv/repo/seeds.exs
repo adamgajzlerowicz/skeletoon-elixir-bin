@@ -10,8 +10,8 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-adam = Skeletoon.Repo.insert! %Skeletoon.User{
+adam = Skeletoon.Repo.insert! %Skeletoon.Models.User{
   email: "nelf86@gmail.com",
   name: "nelf",
-  password: "123"
+  password_hash: Comeonin.Bcrypt.hashpwsalt("123")
 }
